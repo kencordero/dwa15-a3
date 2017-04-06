@@ -9,7 +9,7 @@
     </title>
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/styles/global.css">
 </head>
 <body>
     @yield('content')
