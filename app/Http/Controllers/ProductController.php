@@ -7,16 +7,16 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     /*
-    * GET
-    * /show/{name}
+        GET
+        /show/{name}
     */
     public function show($name) {
         return view('products.show')->with(['name' => $name]);
     }
 
     /*
-    * GET
-    * /
+        GET
+        /
     */
     public function index() {
         return view('products.index');

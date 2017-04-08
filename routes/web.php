@@ -10,6 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+if (config('app.env') == 'local') {
+    Route::get('/logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+}
+
 Route::get('/show/{name}', 'ProductController@show');
 
 Route::get('/', 'ProductController@index');
