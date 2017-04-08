@@ -17,4 +17,8 @@ if (config('app.env') == 'local') {
 
 Route::get('/show/{name}', 'ProductController@show');
 
+Route::get('/order', 'OrderController@displayOrderForm');
+
+Route::post('/order', 'OrderController@placeOrder');
+
 Route::get('/', 'ProductController@index');
