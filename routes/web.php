@@ -15,10 +15,4 @@ if (config('app.env') == 'local') {
     Route::get('/logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 }
 
-Route::get('/show/{name}', 'ProductController@show');
-
-Route::get('/order', 'OrderController@displayOrderForm');
-
-Route::post('/order', 'OrderController@placeOrder');
-
-Route::get('/', 'ProductController@index');
+Route::get('/', 'BillSplitterController@form');
