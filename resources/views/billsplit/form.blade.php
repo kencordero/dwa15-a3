@@ -21,6 +21,9 @@
             <option value="20">20%</option>
         </select></br>
 
+        <label for="round">Round up?</label>
+        <input type="checkbox" id="round" name="round">
+
         <input type="submit" value="Calculate">
     </form>
 @endsection
