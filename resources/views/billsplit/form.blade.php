@@ -15,14 +15,14 @@
 
         <label for="tip">Tip:</label>
         <select name="tip" id="tip" required>
-            <option value"">Choose</option>
+            <option value="">Choose</option>
             <option value="10">10%</option>
             <option value="15">15%</option>
             <option value="20">20%</option>
         </select></br>
 
         <label for="round">Round up?</label>
-        <input type="checkbox" id="round" name="round">
+        <input type="checkbox" id="round" name="round"></br>
 
         <input type="submit" value="Calculate">
     </form>
