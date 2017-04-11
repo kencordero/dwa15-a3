@@ -17,19 +17,24 @@
         <select name="tip" id="tip" required>
             <option value="">Choose</option>
             @for ($i = 0;  $i < 101; $i += 5)
-                <option value="{{ $i }}" @if ($request->input("tip") == $i){{ 'selected' }} @endif>{{ $i }}%</option>
+                <option value="{{ $i }}" @if ($request->input("tip") == $i){{ 'selected' }} @endif>{{ $i  }}%</option>
             @endfor
         </select></br>
 
         <label for="round">Round up?</label>
-        <input type="checkbox" id="round" name="round"></br>
-
+        <input type="checkbox" id="round" name="round" @if ($request->has("round")) {{ 'checked' }} @endif></br>
         <input type="submit" value="Calculate">
-        @if ($quotient)
-            <div class="alert alert-info">
-                <h1>Result</h1>
-
-            </div>
-        @endif
     </form>
+    @if(count($errors) > 0)
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @elseif($quotient)
+        <div class="alert alert-info">
+            <h1>Result</h1>
+            <p>Each patron owes ${{ number_format($quotient, 2) }}</p>
+        </div>
+    @endif
 @endsection
